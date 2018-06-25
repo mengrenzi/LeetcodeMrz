@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>image_gallery</title>
+  <link rel="stylesheet" href="styles/style.css" media="screen" />
+</head>
+
+<body>
+  <h1>Snapshots</h1>
+  <ul>
+    <li>
+      <a href="images/fireworks.jpg" name="myfireworks" onclick="showPic(this); return false;">Fireworks</a>
+    </li>
+    <li>
+      <a href="images/coffee.jpg" name="mycoffee" onclick="showPic(this); return false;">Coffee</a>
+    </li>
+    <li>
+      <a href="images/rose.jpg" name="myrose" onclick="showPic(this); return false;">Rose</a>
+    </li>
+    <li>
+      <a href="images/bigben.jpg" name="mybigben" onclick="showPic(this); return false;">Big Ben</a>
+    </li>
+  </ul>
+
+  <img id="placeholder" src="images/placeholder.gif" alt="placeholder" />
+  <p id="description">Choose an images</p>
+
+  <script src="scripts/showPic.js"></script>
+</body>
+
+</html>
