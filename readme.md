@@ -1,1 +1,1 @@
-This is my leetcode repository
+This repositories relates to leetcode, code sample in books and codes in interview.
