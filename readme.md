@@ -1,1 +1,1 @@
-This repositories relates to Leetcode, code samples in books and codes in interview.
+This repositories relates to Leetcode, codes samples in books and codes in interview.
