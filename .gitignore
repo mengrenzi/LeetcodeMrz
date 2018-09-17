@@ -1,3 +1,6 @@
 # compile file
 *.o
 *.exe
+/LeetcodeJava/out
+/LeetcodeJava/.idea
+*iml
