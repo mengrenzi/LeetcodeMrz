@@ -23,7 +23,6 @@ class Solution022 {
 
         if(left < n){
             helper ( curr + '(', result, n, left + 1, right );
-
         }
 
         if(left > right) {
