@@ -26,10 +26,8 @@ class Solution013 {
             else
                 result += mapAdd.get (s.charAt ( i ));
         }
-
         return result;
     }
-
 }
 
 public class RtoI {

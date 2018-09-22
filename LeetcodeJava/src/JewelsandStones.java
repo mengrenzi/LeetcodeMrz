@@ -8,7 +8,7 @@ import java.util.Set;
  * @Copyright： 2018, Renzi Meng, All Rights Reserved.
  */
 
-class Solution {
+class Solution771 {
     public int numJewelsInStones(String J, String S) {
         char[] JArray = J.toCharArray ();
         char[] SArray = S.toCharArray ();
