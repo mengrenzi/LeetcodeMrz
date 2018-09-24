@@ -5,11 +5,6 @@
  * @Copyright： 2018, Renzi Meng, All Rights Reserved.
  */
 
-class ListNode {
-    int val;
-    Solution018.ListNode next;
-    ListNode(int x) { val = x; }
-};
 
 class Solution018 {
 

@@ -10,11 +10,12 @@ import java.util.Set;
 
 class Solution028 {
     public int strStr(String haystack, String needle) {
-        for(int i = 0; ;i++){
-            for(int k = 0; ; k++){
-                if(k == needle.length ()) return i;
-                if(k+i == haystack.length ()) return -1;
-                if(needle.charAt ( i ) != haystack.charAt (i+k)) break;
+        for (int i = 0; ; i++) {
+            for (int k = 0; ; k++) {
+                if (k == needle.length ()) return i;
+                if (k + i == haystack.length ()) return -1;
+                if (needle.charAt ( i ) != haystack.charAt ( i + k )) break;
+            }
         }
     }
 }
@@ -22,6 +23,7 @@ class Solution028 {
 public class implementStr {
     public void main(String[] args) {
         Solution028 mysolution = new Solution028 ();
-        System.out.println ( mysolution.strStr ("mississippi","issip" ) );
+        System.out.println ( mysolution.strStr ( "mississippi", "issip" ) );
     }
 }
+

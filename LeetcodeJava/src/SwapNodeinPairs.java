@@ -6,13 +6,7 @@
  */
 
 class Solution024{
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-        }
-    }
+
 
     public ListNode swapPairs(ListNode head) {
         ListNode result = new ListNode ( 0 );
