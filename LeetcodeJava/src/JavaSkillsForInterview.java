@@ -53,9 +53,12 @@ public class JavaSkillsForInterview {
 
         list.add ( 0 );
         list.add ( 0, 1 );
-        list.get ( 0 );
+        list.get ( 0 );     // index
         list.size ();
         list.remove ( list.size () - 1 );
+
+        int x = 1;
+        list.contains ( x );
 
         Collections.sort(list);
         Collections.sort(list, Collections.<Integer>reverseOrder ());
@@ -89,6 +92,7 @@ public class JavaSkillsForInterview {
         HashMap<Character, Integer> map = new HashMap <Character, Integer> (  );
         map.put ( 'c', 1 );
         map.get ( 'c' );
+        map.entrySet ();
 
         if (map.containsValue ( 1 )) {
 
