@@ -131,5 +131,10 @@ public class JavaSkillsForInterview {
         while (!pq.isEmpty ()) {
 
         }
+
+        // Java String 转 List
+        List <String> listS = new ArrayList <> (  );
+        listS = Arrays.asList ( s.split ( "," ) );
+
     }
 }
