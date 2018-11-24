@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class RansomNote {
 }
 
-class Solution {
+class Solution383 {
     public boolean canConstruct(String ransomNote, String magazine) {
         int[] charCount = new int[26];
 
