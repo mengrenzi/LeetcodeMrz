@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class LinkedListCycle {
 }
 
-public class Solution141 {
+class Solution141 {
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
         ListNode fast = head;
