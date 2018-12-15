@@ -6,7 +6,6 @@
  */
 
 class Solution2 {
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode sentinel = new ListNode(0);
         ListNode d = sentinel;
@@ -38,8 +37,4 @@ class Solution2 {
 
 
 public class addtwoNum {
-    public static void main(String[] args) {
-
-
-    }
 }
