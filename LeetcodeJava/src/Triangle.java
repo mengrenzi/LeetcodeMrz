@@ -23,6 +23,20 @@ class Solution120 {
 
         return sumList[0];
     }
+
+
+    public int minimumTotal2(List<List<Integer>> triangle) {
+        if(triangle.size () == 0)   return 0;
+        int[] sumList = new int[triangle.size ()+1];
+        for(int i = triangle.size () - 1; i >= 0; i-- ) {
+            for(int j = 0; j < triangle.get ( i ).size (); j++) {
+                sumList[j] = triangle.get ( i ).get ( j ) + Math.min( sumList[j] , sumList[j + 1]);
+            }
+        }
+
+
+        return sumList[0];
+    }
 }
 
 
