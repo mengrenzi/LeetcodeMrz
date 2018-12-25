@@ -1,9 +1,9 @@
-package jianzhioffer;
+package Renzi2019;
 
 /**
  * @Description:
  * @Author: Renzi Meng
- * @Date: Created in 11:34 2018/11/25
+ * @Date: Created in 11:35 2018/12/25
  * @Copyright： 2018, Renzi Meng, All Rights Reserved.
  */
 
@@ -12,8 +12,5 @@ public class ListNode {
 
     ListNode next = null;
 
-    ListNode(int val) {
-        this.val = val;
-    }
+    ListNode(int val) {this.val = val;}
 }
-
