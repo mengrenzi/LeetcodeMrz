@@ -8,42 +8,41 @@ package Renzi2019;
  */
 
 public class FindKthLargest {
-    public int findKthLargest(int[] nums, int k) {
+    public static int findKthLargest(int[] nums, int k) {
         if(nums.length == 0) return -1;
         return help (0, nums.length - 1, nums, k);
     }
 
-    private int help(int start, int last, int[] nums, int k) {
+    private static int help(int start, int last, int[] nums, int k) {
+        if(start == last) return nums[start];
         int pivot = nums[start];
-        int left = start + 1, right = last;
+        int left = start, right = last + 1;
         while(right > left) {
-            while( right > left && nums[left] < pivot) {
-                left++;
-            }
-            while( right > left && nums[right] > pivot) {
-                right--;
-            }
+            while( last > left && nums[++left] < pivot);
+            while( right > start && nums[--right] > pivot);
+            if(left >= right) break;
             swap ( nums, left, right );
         }
-        if(nums[left] > pivot) {
-            left--;
-        }else {
-            right++;
-        }
+        swap(nums, start, right);
 
         int x = nums.length - right;
         if(x == k) {
             return pivot;
         }else if(x > k) {
-            return help ( start + 1, left, nums,k );
+            return help ( left, last, nums, k );
         }else{
-            return help ( right, last, nums, k );
+            return help ( start, right - 1, nums,k );
         }
     }
 
-    private void swap(int[] nums, int x, int y) {
+    private static void swap(int[] nums, int x, int y) {
         int tmp = nums[x];
         nums[x] = nums[y];
         nums[y] = tmp;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println ( findKthLargest ( new int[]{3,2,1,5,6,4}, 2 ) );
     }
 }
