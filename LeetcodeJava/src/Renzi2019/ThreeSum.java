@@ -15,17 +15,34 @@ import java.util.*;
 
 public class ThreeSum {
 
-    public static void main(String[] args) {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> lists = new LinkedList <> (  );
+        LinkedList<Integer> list = new LinkedList<> (  );
+        Arrays.sort ( nums );
+        for(int i = 0; i< nums.length - 2; i++) {
+            if(i > 0 && nums[i-1] == nums[i]) continue;
+            int target = 0 - nums[i];
 
-        Class c = Integer.class;
-        Method d;
-
-        {
-            try {
-                d = c.getDeclaredMethod ("toString", int.class);
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace ();
+            int start = i + 1, end = nums.length - 1;
+            while(start < end) {
+                if(nums[start] + nums[end] == target) {
+                    lists.add ( Arrays.asList ( nums[i] ,nums[start], nums[end] ) );
+                    start++;
+                    end--;
+                    while(start < end && nums[start] == nums[start - 1]){
+                        start++;
+                    }
+                }else if(nums[start] + nums[end] < target) {
+                    start++;
+                }else {
+                    end--;
+                }
             }
         }
+        return lists;
+    }
+
+    public static void main(String[] args) {
+        threeSum ( new int[]{-2,0,0,2,2} );
     }
 }
