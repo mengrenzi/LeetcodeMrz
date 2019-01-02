@@ -15,44 +15,30 @@ public class NextPermutation {
 
 
 class Solution31 {
-    public String frequencySort(String s) {
-        int len = s.length ();
-        if(len == 0) return s;
-        int[] x = new int[128];
-        int i = len - 2;
-
-        while(i > 0 && x[i] > x[i-1]) {
-            i--;
-        }
-
-        char[] sArray = s.toCharArray ();
-
-        if(i != 0) {
-            for(int j = i + 1; j < s.length (); j++) {
-                if(sArray[j] < )
+    public static void nextPermutation(int[] nums) {
+        int i;
+        for(i = nums.length - 1; i > 0; i--) {
+            if(nums[i] > nums[i-1]) {
+                break;
             }
         }
 
-        for(int j = i; j < s.length (); j++) {
+        int len = nums.length - 1;
 
+        while(len > i) {
+            swap ( i++, len--, nums);
         }
 
-
-        return Arrays.toString ( sArray );
     }
 
-    private String swap(int i, int j, String s) {
-        char[] sArray = s.toCharArray ();
-        char tmp = sArray[i];
+    private static void swap(int i, int j, int[] sArray) {
+        int tmp = sArray[i];
         sArray[i] = sArray[j];
         sArray[j] = tmp;
-        return Arrays.toString ( sArray );
     }
 
-    private void swap(int i, int j, char[] sArray) {
-        char tmp = sArray[i];
-        sArray[i] = sArray[j];
-        sArray[j] = tmp;
+    public static void main(String[] args) {
+        nextPermutation ( new int[]{1,1} );
     }
 
 }
