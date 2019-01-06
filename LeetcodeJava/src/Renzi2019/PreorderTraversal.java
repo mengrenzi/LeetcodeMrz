@@ -2,6 +2,7 @@ package Renzi2019;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @Description:
@@ -25,5 +26,22 @@ class Solution144 {
         list.add ( root.val );
         preorderTraversal ( root.left, list);
         preorderTraversal ( root.right, list);
+    }
+
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        LinkedList<Integer> list = new LinkedList <> (  );
+        Stack<TreeNode> stack = new Stack <> ();
+        TreeNode p = root;
+
+        while(!stack.isEmpty () || p != null) {
+            if(p != null) {
+                stack.push ( p );
+                list.add ( p.val );
+                p = p.left;
+            }else {
+                p = stack.pop ().right;
+            }
+        }
+        return list;
     }
 }
