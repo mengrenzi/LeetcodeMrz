@@ -1,3 +1,5 @@
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,7 +46,8 @@ class Solution972 {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException {
 
     }
+
 }
