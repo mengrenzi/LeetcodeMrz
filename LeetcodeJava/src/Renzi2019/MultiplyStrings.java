@@ -9,10 +9,6 @@ package Renzi2019;
 
 public class MultiplyStrings {
     public String multiply(String num1, String num2) {
-        if(num1.length () == 0 || num2.length () == 0) return null;
-
-        int[] multiplys = new int[num2.length ()];
-        for(int i = 0; i< num2.length (); i++) {
-        }
+        return " ";
     }
 }
